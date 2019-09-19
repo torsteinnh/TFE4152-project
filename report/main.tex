@@ -1,0 +1,119 @@
+\documentclass[a4paper, 11pt, norsk]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{a4wide}
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage[british]{babel}
+\usepackage{listings}
+\usepackage{amsmath}
+\usepackage[pdftex, pdfborderstyle={/S/U/W 0}]{hyperref}
+\usepackage{graphicx}
+\usepackage[font=small,labelfont=bf]{caption}
+\usepackage{booktabs}
+\usepackage[parfill]{parskip}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{csquotes}
+\usepackage{tcolorbox}
+\usepackage{colortbl}
+\usepackage[backend=biber,style=ieee,sortcites]{biblatex}
+\usepackage[toc,page]{appendix}
+\usepackage{subcaption}
+\usepackage{setspace}
+\usepackage{wrapfig}
+
+
+\setcounter{secnumdepth}{6}
+
+\lstset{literate=%
+  {æ}{{\ae}}1
+  {å}{{\aa}}1
+  {ø}{{\o}}1
+  {Æ}{{\AE}}1
+  {Å}{{\AA}}1
+  {Ø}{{\O}}1
+}
+\lstset{extendedchars=\true}
+\lstset{inputencoding=ansinew}
+
+
+\addbibresource{ref.bib}
+
+\setlength{\parskip}{2ex}
+
+\begin{document}
+
+% Headingdel:---------------------------------------------
+\begin{minipage}[c]{0.10\textwidth}
+  \includegraphics[width=1.3 \textwidth]{figures/elsys_pos_staaende_ntnu}  
+\end{minipage}
+\begin{minipage}[c]{0.85\textwidth}
+  \huge \centering
+  % Skriv emnekode her:-------------
+  TFE4152 Design av integrerte kretser\\
+  \vspace{1ex}
+  \huge \textbf{
+    % Skriv tittel her:-------------
+    Semester project:\\
+    Design of the support circuit for a digital camera
+    % ------------------------------
+  }\\
+  \vspace{1ex}
+  \Large
+  % Skriv inn forfattere her------
+  J.~L.~Selnes T.~Nordgård-Hansen
+  % ------------------------------
+  \vspace{3ex}
+  
+  \normalsize
+  
+  \begin{tabular}{p{0.1\textwidth} p{0.3\textwidth} p{0.3\textwidth}}
+    \toprule
+    & \today\\
+    \bottomrule
+  \end{tabular}
+\end{minipage}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\textwidth]{figures/logo.png}
+\end{figure}
+
+
+\newpage
+% Automatisk generert innholdsfortegnelse:------------------
+\setlength{\parskip}{0ex}
+\renewcommand{\baselinestretch}{0.1}\normalsize
+\onehalfspacing
+\tableofcontents
+\singlespacing
+\renewcommand{\baselinestretch}{1.00}\normalsize
+\setlength{\parskip}{2ex}
+\rule{\textwidth}{1pt}
+
+
+% \newpage
+% \section{Title of section} \label{sec:TitleOfSection}
+% \input{text/TitleOfSection}
+
+
+\newpage
+\section{References}
+\printbibliography
+
+
+
+% ----------------------------------
+% APENDIX
+\newpage
+\begin{appendices}
+  
+  
+  % \section{First appendix}\label{ap:FirstAppendix}
+  
+\end{appendices}
+\end{document}
