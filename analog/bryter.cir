@@ -1,0 +1,12 @@
+.include parameters.cir
+
+.include models/p18_cmos_models.inc
+
+
+M3 N3 N2 0 1 PMOS W=M3W L=M3L
+M4 out 0 N3 1 PMOS W=M4W L=M4L
+
+Vtest N2 0 dc 1.8
+
+.dc Vtest 0 1.8 0.001
+.plot dc v(out)

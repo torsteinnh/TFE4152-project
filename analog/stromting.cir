@@ -1,0 +1,13 @@
+.include parameters.cir
+
+.include models/p18_cmos_models.inc
+
+
+CC out 0 CCval
+MC 1 out out 1 NMOS W=MCW L=MCL
+
+VTEST out 0 1.8
+
+
+.dc VTEST 0 1.8 0.001
+.plot dc i(VTEST)
