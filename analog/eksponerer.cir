@@ -1,0 +1,19 @@
+* Simulation of the exposure of one pixel
+
+.include models/p18_cmos_models.inc
+.include parameters.cir
+.include models/photo_diode.inc
+
+
+xphoto1 1 N1 PhotoDiode
+M1 N1 exposen N2 0 NMOS W=M1W L=M1L
+M2 N2 erasen 0 0 NMOS W=M2W L=M2L
+CS N2 0 CSval
+
+
+.connect erasen ERASE
+.connect EXPOSE exposen
+
+
+.tran {PERIOD / 100000} PERIOD
+.plot trans v(N2)

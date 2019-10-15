@@ -1,0 +1,28 @@
+* Simulation of one pixel
+
+.include models/p18_cmos_models.inc
+.include parameters.cir
+.include models/photo_diode.inc
+
+
+xphoto 1 N1 PhotoDiode
+
+M1 N1 exposen N2 0 NMOS W=M1W L=M1L
+M2 N2 erasen 0 0 NMOS W=M2W L=M2L
+CS N2 0 CSval
+
+M3 N3 N2 0 1 PMOS W=M3W L=M3L
+M4 outn nren N3 1 PMOS W=M4W L=M4L
+
+MC 1 outn ccnode 1 PMOS W=MCW L=MCL
+CC ccnode 0 CCval
+M4other outn 1 1 1 PMOS W=M4W L=M4L
+
+
+.connect erasen ERASE
+.connect exposen EXPOSE
+.connect nren NRE_R1
+
+
+.tran {PERIOD / 100000} PERIOD
+.plot trans v(outn)
