@@ -1,0 +1,26 @@
+* A file with subcircuits for the camera
+
+.include models/p18_cmos_models.inc
+.include models/photo_diode.inc
+
+
+.subckt pixel VDD GND EXPOSE ERASE NRE OUT
+
+xphoto VDD N1 PhotoDiode
+
+M1 N1 EXPOSE N2 GND NMOS W=M1W L=M1L
+M2 N2 ERASE GND GND NMOS W=M2W L=M2L
+CS N2 GND CSval
+
+M3 N3 N2 GND VDD PMOS W=M3W L=M3L
+M4 OUT NRE N3 VDD PMOS W=M4W L=M4L
+
+.ends
+
+
+.subckt currentamp VDD GND IO
+
+MC VDD IO IO VDD PMOS W=MCW L=MCL
+CC IO GND CCval
+
+.ends
