@@ -4,7 +4,7 @@
 
 * Test parameters
 .param Ipd_1 = 750p ! Photodiode current, range [50 pA, 750 pA]
-.param EXPOSURETIME = 2m ! Exposure time, range [2 ms, 30 ms]
+.param EXPOSURETIME = 4m ! Exposure time, range [2 ms, 30 ms]
 
 
 * Derived and fixed test parameters
@@ -38,8 +38,8 @@ VNRE_R2 NRE_R2 0 dc 0  pulse(VDD 0 NRE_R2_DLY TRF TRF READ_TIME PERIOD)
 .param M3L = 0.67u
 .param M4W = 1.08u
 .param M4L = 1.08u
-.param MCW = 1u
-.param MCL = 1u
+.param MCW = 5.04u
+.param MCL = 0.36u
 
-.param CSval = 2p
+.param CSval = 2.5p
 .param CCval = 3p
