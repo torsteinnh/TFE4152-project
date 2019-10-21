@@ -4,14 +4,14 @@
 .include components.cir
 
 
-xPixel11 1 0 EXPOSE ERASE NRE_R1 OUT_C1 pixel
-xPixel12 1 0 EXPOSE ERASE NRE_R1 OUT_C2 pixel
-xPixel21 1 0 EXPOSE ERASE NRE_R2 OUT_C1 pixel
-xPixel22 1 0 EXPOSE ERASE NRE_R2 OUT_C2 pixel
+xPixel11 1 0 EXPOSE ERASE NRE_R1 OUT_C1 N211 pixel
+xPixel12 1 0 EXPOSE ERASE NRE_R1 OUT_C2 N212 pixel
+xPixel21 1 0 EXPOSE ERASE NRE_R2 OUT_C1 N221 pixel
+xPixel22 1 0 EXPOSE ERASE NRE_R2 OUT_C2 N222 pixel
 
 xcurrentAmp1 1 0 OUT_C1 currentamp
 xcurrentAmp2 1 0 OUT_C2 currentamp
 
 
 .tran {PERIOD / 100000} PERIOD
-.plot tran v(OUT_C1) v(ERASE) v(EXPOSE) v(NRE_R1) v(NRE_R2) v(OUT_C2)
+.plot tran v(OUT_C1) v(ERASE) v(EXPOSE) v(NRE_R1) v(NRE_R2) v(OUT_C2) v(N211)

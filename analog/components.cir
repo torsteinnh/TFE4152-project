@@ -4,7 +4,7 @@
 .include models/photo_diode.inc
 
 
-.subckt pixel VDD GND EXPOSE ERASE NRE OUT
+.subckt pixel VDD GND EXPOSE ERASE NRE OUT N2
 
 xphoto VDD N1 PhotoDiode
 
