@@ -21,6 +21,8 @@ module exp_reg(input  logic clk, reset, inc, dec,
 endmodule // exp_reg
 
 
+`ifndef _no_testbench_
+
 module exp_reg_tb;
    logic clk, reset, inc, dec;
    logic [4:0] q;
@@ -58,4 +60,5 @@ module exp_reg_tb;
 endmodule // exp_reg_tb
 
 
-`endif
+`endif //  `ifndef _no_testbench_
+`endif //  `ifndef _exp_reg_v_25_
