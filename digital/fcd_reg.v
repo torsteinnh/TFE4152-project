@@ -21,12 +21,12 @@ module fcd_reg(input logic clk, enable, dset,
      else if (enable & data_int > 'b0)
        data_int <= data_int - 1;
 
-   assign finished = (data_int == 'b0) ? 1 : 0;
+   assign finished = (data_int == 5'd1) ? 1 : 0;
    
 endmodule // fcd_reg
 
 
-`ifndef _no_testbench_
+ `ifndef _no_testbench_
 
 
 module fcd_reg_tb;
@@ -71,6 +71,6 @@ endmodule // fcd_reg_tb
 
 
 
-`endif //  `ifndef _no_testbench_
+ `endif //  `ifndef _no_testbench_
 `endif //  `ifndef _fcd_reg_v_28_
 

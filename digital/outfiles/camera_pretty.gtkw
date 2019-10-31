@@ -1,0 +1,48 @@
+[*]
+[*] GTKWave Analyzer v3.3.102 (w)1999-2019 BSI
+[*] Thu Oct 31 16:08:54 2019
+[*]
+[dumpfile] "/home/pvv/d/torsteno/Sync/Skole/3.h_elsys/ic/TFE4152-project/digital/outfiles/out_camera_fsm_tb.vcd"
+[dumpfile_mtime] "Thu Oct 31 16:08:43 2019"
+[dumpfile_size] 6255
+[savefile] "/home/pvv/d/torsteno/Sync/Skole/3.h_elsys/ic/TFE4152-project/digital/outfiles/camera_pretty.gtkw"
+[timestart] 0
+[size] 1920 1163
+[pos] -1 -1
+*-14.916899 301500 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] camera_fsm_tb.
+[sst_width] 228
+[signals_width] 234
+[sst_expanded] 1
+[sst_vpaned_height] 336
+@28
+camera_fsm_tb.clk
+[color] 1
+camera_fsm_tb.init
+[color] 3
+camera_fsm_tb.inc
+[color] 3
+camera_fsm_tb.dec
+[color] 1
+camera_fsm_tb.reset
+[color] 6
+camera_fsm_tb.erase
+@29
+[color] 6
+camera_fsm_tb.expose
+@28
+[color] 2
+camera_fsm_tb.nre1
+[color] 2
+camera_fsm_tb.nre2
+[color] 2
+camera_fsm_tb.adc
+[color] 7
+camera_fsm_tb.test_camera.current_state[1:0]
+[color] 7
+camera_fsm_tb.test_camera.next_state[1:0]
+@24
+[color] 5
+camera_fsm_tb.test_camera.fcd_data[4:0]
+[pattern_trace] 1
+[pattern_trace] 0
