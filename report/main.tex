@@ -29,13 +29,16 @@
 
 \setcounter{secnumdepth}{6}
 
+\input{tools/listingsstyles}
 \lstset{literate=%
   {æ}{{\ae}}1
   {å}{{\aa}}1
   {ø}{{\o}}1
   {Æ}{{\AE}}1
   {Å}{{\AA}}1
-  {Ø}{{\O}}1
+  {Ø}{{\O}}1,
+  breaklines=true,
+  tabsize=2
 }
 \lstset{extendedchars=\true}
 \lstset{inputencoding=ansinew}
@@ -123,11 +126,11 @@
 
 \newpage
 \section{Simulations} \label{sec:Simulations}
-\input{test/simulations}
+\input{text/simulations}
 
 \newpage
 \section{Conclusion} \label{sec:Conclusion}
-\input{test/conclusion}
+\input{text/conclusion}
 
 \newpage
 \section{References} \label{sec:References}
@@ -146,6 +149,11 @@
   
   \newpage
   \section{Verilog code} \label{ap:VerilogCode}
+  \lstinputlisting[language=Verilog, style={verilog-style}, caption={Main module for camera control testbench}, label=VLCameraMainTB]{../digital/camera_fsm_tb.v}
+  \lstinputlisting[language=Verilog, style={verilog-style}, caption={Main module for camera control}, label=VLCameraMain]{../digital/camera_fsm.v}
+  \lstinputlisting[language=Verilog, style={verilog-style}, caption={Exposure register}, label=VLExpReg]{../digital/exp_reg.v}
+  \lstinputlisting[language=Verilog, style={verilog-style}, caption={Counter for exposure time}, label=VLFCD]{../digital/fcd_reg.v}
+  \lstinputlisting[language=Verilog, style={verilog-style}, caption={Readout sequencer}, label=VLSeq]{../digital/readout_seq.v}
   
 \end{appendices}
 \end{document}

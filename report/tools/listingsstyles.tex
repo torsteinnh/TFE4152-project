@@ -1,0 +1,32 @@
+\definecolor{vgreen}{RGB}{104,180,104}
+\definecolor{vblue}{RGB}{49,49,255}
+\definecolor{vorange}{RGB}{255,143,102}
+
+\lstdefinestyle{verilog-style}
+{
+    language=Verilog,
+    basicstyle=\small\ttfamily,
+    keywordstyle=\color{vblue},
+    identifierstyle=\color{black},
+    commentstyle=\color{vgreen},
+    numbers=left,
+    numberstyle=\tiny\color{black},
+    numbersep=10pt,
+    tabsize=8,
+    moredelim=*[s][\colorIndex]{[}{]},
+    literate=*{:}{:}1
+}
+
+\makeatletter
+\newcommand*\@lbracket{[}
+\newcommand*\@rbracket{]}
+\newcommand*\@colon{:}
+\newcommand*\colorIndex{%
+    \edef\@temp{\the\lst@token}%
+    \ifx\@temp\@lbracket \color{black}%
+    \else\ifx\@temp\@rbracket \color{black}%
+    \else\ifx\@temp\@colon \color{black}%
+    \else \color{vorange}%
+    \fi\fi\fi
+}
+\makeatother
