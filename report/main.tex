@@ -1,4 +1,4 @@
-\documentclass[a4paper, 11pt, english]{article}
+\documentclass[a4paper, 12pt, english]{article}
 
 \usepackage[utf8]{inputenc}
 \usepackage{a4wide}
@@ -57,7 +57,7 @@
 \begin{minipage}[c]{0.85\textwidth}
   \huge \centering
   % Skriv emnekode her:-------------
-  TFE4152 Design av integrerte kretser\\
+  TFE4152 Design of Integrated Circuits\\
   \vspace{1ex}
   \huge \textbf{
     % Skriv tittel her:-------------
@@ -146,6 +146,12 @@
   % \section{First appendix}\label{ap:FirstAppendix}
   
   \section{Spice code} \label{ap:SpiceCode}
+  \lstinputlisting[language=Verilog, caption={Main simulation of analog pixels}, label=ASCameraMain]{../analog/camera.cir}
+  \lstinputlisting[language=Verilog, caption={Components in the camera}, label=ASComponents]{../analog/components.cir}
+  \lstinputlisting[language=Verilog, caption={Parameters for the camera}, label=ASParameters]{../analog/parameters.cir}
+  \lstinputlisting[language=Verilog, caption={MOSFET models part 1}, label=ASMosfet1]{../analog/models/p18_cmos_models.inc}
+  \lstinputlisting[language=Verilog, caption={MOSFET models part 2}, label=ASMosfet2]{../analog/models/p18_model_card.inc}
+  \lstinputlisting[language=Verilog, caption={Photo diode models}, label=ASPhotoResistor]{../analog/models/photo_diode.inc}
   
   \newpage
   \section{Verilog code} \label{ap:VerilogCode}
