@@ -1,4 +1,4 @@
-\documentclass[a4paper, 11pt, norsk]{article}
+\documentclass[a4paper, 11pt, english]{article}
 
 \usepackage[utf8]{inputenc}
 \usepackage{a4wide}
@@ -102,7 +102,35 @@
 
 
 \newpage
-\section{References}
+\section{Abstract} \label{sec:Abstract}
+\input{text/abstract}
+
+% \newpage
+\section{Introduction} \label{sec:Introduction}
+\input{text/introduction}
+
+\newpage
+\section{Theory} \label{sec:Theory}
+\input{text/theory}
+
+\newpage
+\section{Analog design} \label{sec:AnalogDesign}
+\input{text/analogdesign}
+
+\newpage
+\section{Digital design} \label{sec:DigitalDesign}
+\input{text/digitaldesign}
+
+\newpage
+\section{Simulations} \label{sec:Simulations}
+\input{test/simulations}
+
+\newpage
+\section{Conclusion} \label{sec:Conclusion}
+\input{test/conclusion}
+
+\newpage
+\section{References} \label{sec:References}
 \printbibliography
 
 
@@ -112,8 +140,13 @@
 \newpage
 \begin{appendices}
   
-  
   % \section{First appendix}\label{ap:FirstAppendix}
+  
+  \section{Spice code} \label{ap:SpiceCode}
+  
+  \newpage
+  \section{Verilog code} \label{ap:VerilogCode}
   
 \end{appendices}
 \end{document}
+
