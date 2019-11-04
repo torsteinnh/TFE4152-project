@@ -18,10 +18,10 @@ module fcd_reg(input logic clk, enable, dset,
    always @(posedge clk)
      if (dset)
        data_int <= dread_data;
-     else if (enable & data_int > 'b0)
+     else if (enable && (data_int > 'b0))
        data_int <= data_int - 1;
 
-   assign finished = (data_int == 5'd1) ? 1 : 0;
+   assign finished = (data_int <= 5'd1) ? 1 : 0;
    
 endmodule // fcd_reg
 
