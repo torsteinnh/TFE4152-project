@@ -144,6 +144,22 @@
 \begin{appendices}
   
   % \section{First appendix}\label{ap:FirstAppendix}
+
+  \section{Schematics} \label{ap:Schematics}
+  \begin{figure}[H]
+    \centering
+    \includegraphics[angle=-90, scale=0.45]{figures/SchematicPixel.pdf}
+    \caption{Analog schematic of one pixel}
+    \label{fig:analogPixel}
+  \end{figure}
+  \begin{figure}[H]
+    \centering
+    \includegraphics[angle=-90, scale=0.51]{figures/SchematicCamera.pdf}
+    \caption{Analog schematic of 4 pixels in a camera}
+    \label{fig:analogCamera}
+  \end{figure}
+
+  \newpage
   
   \section{Spice code} \label{ap:SpiceCode}
   \lstinputlisting[language=Verilog, caption={Main simulation of analog pixels}, label=ASCameraMain]{../analog/camera.cir}
@@ -154,6 +170,7 @@
   \lstinputlisting[language=Verilog, caption={Photo diode models}, label=ASPhotoResistor]{../analog/models/photo_diode.inc}
   
   \newpage
+  
   \section{Verilog code} \label{ap:VerilogCode}
   \lstinputlisting[language=Verilog, style={verilog-style}, caption={Main module for camera control testbench}, label=VLCameraMainTB]{../digital/camera_fsm_tb.v}
   \lstinputlisting[language=Verilog, style={verilog-style}, caption={Main module for camera control}, label=VLCameraMain]{../digital/camera_fsm.v}
