@@ -15,8 +15,7 @@ While the photo diode limits the current, this still might lead to excessive pow
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.85\textwidth]{figures/SchematicPixel}
-  \caption{Schematic of one pixel with readout circuit, figure also exists bigger in Appendix~\ref{ap:Schematics}}
-  \label{fig:pixelschematic}
+  \caption{Schematic of one pixel with readout circuit, figure also exists bigger in Appendix~\ref{ap:Schematics}}\label{fig:pixelschematic}
 \end{figure}
 
 
@@ -27,8 +26,23 @@ M4 functions as a simple switch to isolate the pixel from OUT to free the wire w
 
 \subsection{Leakage through transistors}
 
-As described in the analog book~\cite{AnalogBook} stuff can happen.
+We will in this project assume that all voltage transient are so slow that no leakage current is present between gate and the other ports of any of the transistors,
+in the same way we assume there are no leakage currents through any of the capacitors.
+
+As described in Analog~integrated~circuit~design~\cite{AnalogBook} the current from drain to source $I_D \propto \frac{W}{L}$.
+This also makes sense from a geometric point of view.
+
+In order to minimize the leakage current through a transistor that is shut off $\frac{W}{L}$ should be minimized.
 
 \subsection{Conceptual workings of a camera controller}
 
-This might work...
+As shown in Appendix~\ref{ap:Schematics}~figure~\ref{fig:analogCamera} the pixels depend on several digital input signals,
+the job of the camera controller is therefore to trigger these in the desired order.
+The requirements to be met by the controller are as follows:
+
+\begin{itemize}
+\item Pull the erase pin high except when exposing or reading the image
+\item Pull the expose pin high for an appropriate length of time as defined by the user
+\item Read out the values of all pixels in the correct order avoiding interference between different pixels on the same ADC.
+\item Enable the user to reset the whole system. Though the image being taken might be lost the camera should function normally afterwards.
+\end{itemize}
