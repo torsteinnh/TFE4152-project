@@ -14,8 +14,8 @@ While the photo diode limits the current, this still might lead to excessive pow
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.85\textwidth]{figures/SchematicPixel}
-  \caption{Schematic of one pixel with readout circuit, figure also exists bigger in Appendix~\ref{ap:Schematics}}\label{fig:pixelschematic}
+  \includegraphics[width=0.85\textwidth]{figures/pixel}
+  \caption{Schematic of one pixel with readout circuit, figure from~\cite{oppgave}}\label{fig:pixelschematic}
 \end{figure}
 
 
@@ -23,8 +23,7 @@ M3 is used to convert the voltage stored over CS into a variable resistance betw
 M4 functions as a simple switch to isolate the pixel from OUT to free the wire when other pixels in the camera are using it.
 
 
-
-\subsection{Leakage through transistors}
+\subsection{Leakage through transistors} \label{sec:leakagecurrent}
 
 We will in this project assume that all voltage transient are so slow that no leakage current is present between gate and the other ports of any of the transistors,
 in the same way we assume there are no leakage currents through any of the capacitors.
