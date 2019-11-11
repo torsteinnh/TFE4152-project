@@ -15,16 +15,25 @@ The logic connecded to each state is as shown below.
   \2 Reset is the only functional input.
 \end{outline}
 
-
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.85\textwidth]{figures/fsmDiagram}
   \caption{FSM representation of the digital control system}
   \label{fig:fsmDiagram}
 \end{figure}
+
+The hardware was implemented as shown in more detail in figure~\ref{fig:digschematic}.
+The countown logic for the exposure was divided into two parts, one 5bit register to store a value between 2 and 30 as well as a countdown register
+to signal the end of the exposure period.
+
+The readout cycle was also split out into its own sequencer independent of the rest of the machine.
+
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.85\textwidth]{figures/SchematicDigital}
   \caption{Schematic of the digital design, figure allso found in Appendix~\ref{ap:Schematics}}
   \label{fig:digschematic}
 \end{figure}
+
+The full logical description of the digital control system is given in SystemVerilog 2012 in Appendix~\ref{ap:VerilogCode} along with simple test benches for the various components.
+The design was heavily inspired by the FSM examples from~\cite{DigitalBook}.
