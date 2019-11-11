@@ -1,0 +1,37 @@
+\begin{center}
+\begin{tikzpicture}[scale=0.2]
+\tikzstyle{every node}+=[inner sep=0pt]
+\draw [black] (40,-21.1) circle (3);
+\draw (40,-21.1) node {$Idle$};
+\draw [black] (26.2,-42.7) circle (3);
+\draw (26.2,-42.7) node {$Expose$};
+\draw [black] (55.3,-42.7) circle (3);
+\draw (55.3,-42.7) node {$Readout$};
+\draw [black] (16.6,-17.6) circle (3);
+\draw (16.6,-17.6) node {$Illegal$};
+\draw [black] (19.57,-18.04) -- (37.03,-20.66);
+\fill [black] (37.03,-20.66) -- (36.32,-20.04) -- (36.17,-21.03);
+\draw (29.79,-18.47) node [above] {$Always$};
+\draw [black] (38.38,-23.63) -- (27.82,-40.17);
+\fill [black] (27.82,-40.17) -- (28.67,-39.77) -- (27.82,-39.23);
+\draw (33.72,-33.21) node [right] {$Init$};
+\draw [black] (29.2,-42.7) -- (52.3,-42.7);
+\fill [black] (52.3,-42.7) -- (51.5,-42.2) -- (51.5,-43.2);
+\draw (40.75,-43.2) node [below] {$Expose\mbox{ }timer\mbox{ }finished$};
+\draw [black] (53.57,-40.25) -- (41.73,-23.55);
+\fill [black] (41.73,-23.55) -- (41.79,-24.49) -- (42.6,-23.91);
+\draw (48.24,-30.53) node [right] {$Readout\mbox{ }sequencer\mbox{ }finished$};
+\draw [black] (11.3,-11) -- (14.72,-15.26);
+\draw (7.84,-10.51) node [above] {$Initial$};
+\fill [black] (14.72,-15.26) -- (14.61,-14.32) -- (13.83,-14.95);
+\draw [black] (25.13,-39.9) -- (17.67,-20.4);
+\fill [black] (17.67,-20.4) -- (17.49,-21.33) -- (18.42,-20.97);
+\draw (22.15,-29.31) node [right] {$Reset$};
+\draw [black] (18.425,-15.227) arc (135.72058:27.26579:12.789);
+\fill [black] (18.42,-15.23) -- (19.34,-15) -- (18.63,-14.31);
+\draw (30.72,-10.69) node [above] {$Reset$};
+\draw [black] (53.225,-44.863) arc (-47.50524:-198.42793:23.244);
+\fill [black] (15.47,-20.38) -- (14.74,-20.98) -- (15.69,-21.29);
+\draw (21.53,-47.73) node [below] {$Reset$};
+\end{tikzpicture}
+\end{center}
