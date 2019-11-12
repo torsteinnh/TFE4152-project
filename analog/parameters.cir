@@ -3,8 +3,8 @@
 * Include models
 
 * Test parameters
-.param Ipd_1 = 750p ! Photodiode current, range [50 pA, 750 pA]
-.param EXPOSURETIME = 4m ! Exposure time, range [2 ms, 30 ms]
+.param Ipd_1 = 400p ! Photodiode current, range [50 pA, 750 pA]
+.param EXPOSURETIME = 3m ! Exposure time, range [2 ms, 30 ms]
 
 
 * Derived and fixed test parameters
