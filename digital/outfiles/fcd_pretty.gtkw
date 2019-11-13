@@ -1,0 +1,33 @@
+[*]
+[*] GTKWave Analyzer v3.3.102 (w)1999-2019 BSI
+[*] Wed Nov 13 09:29:14 2019
+[*]
+[dumpfile] "/home/pvv/d/torsteno/Sync/Skole/3.h_elsys/ic/TFE4152-project/digital/outfiles/out_fcd_reg_tb.vcd"
+[dumpfile_mtime] "Mon Nov  4 15:25:29 2019"
+[dumpfile_size] 1410
+[savefile] "/home/pvv/d/torsteno/Sync/Skole/3.h_elsys/ic/TFE4152-project/digital/outfiles/fcd_pretty.gtkw"
+[timestart] 0
+[size] 1920 1163
+[pos] -1 -1
+*-2.463219 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] fcd_reg_tb.
+[sst_width] 228
+[signals_width] 150
+[sst_expanded] 1
+[sst_vpaned_height] 336
+@28
+[color] 1
+fcd_reg_tb.testreg.clk
+@22
+fcd_reg_tb.testreg.dread_data[4:0]
+@28
+fcd_reg_tb.testreg.dset
+fcd_reg_tb.testreg.enable
+@23
+[color] 2
+fcd_reg_tb.testreg.data_int[4:0]
+@28
+[color] 1
+fcd_reg_tb.testreg.finished
+[pattern_trace] 1
+[pattern_trace] 0
