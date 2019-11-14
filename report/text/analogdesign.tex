@@ -1,24 +1,24 @@
-When designing the analog circuitry the topology as well as the technological limitations for production was taken from~\cite{oppgave}.
+% ANALOG DESIGN PART
+
+When designing the analog circuitry the topology as well as the technological limitations for production needs to be taken into account. The analog circuitry therefore needs to be scaled for the use case and the trade-offs we are willing to make.
+The analog design is mainly for handling the current coming from the light sensor, and converting it to an voltage-signal to be used by the ADC's.
 This section therefore focuses on the physical dimensions of the different components as specified in figures~\ref{fig:implpixel}~and~\ref{fig:implcamera}.
+
+\subsection{Values for transistors}
 
 The most important property of the analog pixel is that the charge stored over CS remains unchanged while being read,
 the transistors M1 and M2 must therefore be tuned for minimal leakage current as described in Section~\ref{sec:leakagecurrent}.
+The transistors are limited by the technology used and must be in range: $0.3 \mu m < L < 1.080 \mu m$ and $1.080 \mu m < W < 5.040 \mu m $. This can be found in \cite{oppgave}.
 The transistor M4 must be tuned in the same way to avoid any interference between P11 and P21 as well as between P12 and P22 during readout as shown in figure~\ref{fig:implcamera}.
+When dimensioning for minimal leakage current through the transistors, the values would be the same regardless of production imperfections, but we assume an Typical-Typical.
 
-The current source transistors MC1 and MC2 must be tuned for the quickest possible response of the current source, this is in order to get the fastest possible stable output when reading from a pixel.
-They are therefore tuned for maximum current throughput as explained in Section~\ref{sec:leakagecurrent} and verified in Section~\ref{sec:Simulations}.
-
-The capacitor CS and transistor M3 are tuned to empirically found values as shown in Section~\ref{sec:Simulations} in order to give the best dynamic range of the pixel
-as a function of lighting conditions and exposure time.
-
-All component values are shown in table~\ref{tab:componentvalues}.
+The choice of physical dimensions are showed in table \ref{tab:transcomponentvalues}.
 
 \begin{table}[htbp]
   \centering
-  \caption{Physical values of components}
-  \subcaption*{Panel A: transistors}
+  \caption{Physical values of transistors}
   \begin{tabular}{ c | c c }
-    Component & W & L \\
+    Component & W[m] & L[m] \\
     \midrule
     M1 & $1.08\mu$ & $1.08\mu$ \\
     M2 & $1.08\mu$ & $1.08\mu$ \\
@@ -27,16 +27,31 @@ All component values are shown in table~\ref{tab:componentvalues}.
     MC1 & $5.04\mu$ & $0.36\mu$ \\
     MC2 & $5.04\mu$ & $0.36\mu$
   \end{tabular}
-  \bigskip
-  \subcaption*{Panel B: capacitors}
-  \begin{tabular}{c | c}
-    Component & C \\
-    \midrule
-    CS & $2.5pF$ \\
-    CC1 & $3.0pF$ \\
-    CC2 & $3.0pF$
-  \end{tabular} \label{tab:componentvalues}
+  \label{tab:transcomponentvalues}
 \end{table}
+
+
+
+\subsection{Values for capacitors}
+
+The capacitors will be scaled to have maximum dynamic range. We know that the exposure time  will be between $2ms$ and $30ms$, and the capacitor should be fully charged at exactly 30ms. If the capacitance is too low, the capacitor will be fully charged before the full 30ms exposure time, which is not ideal. Tis needs to be correct when the light sensor is maxed out. The value for CS was empirically found with simulation, see Section~\ref{sec:Simulations}.
+
+The current source transistors MC1 and MC2 must be tuned for the quickest possible response of the current source, this is in order to get the fastest possible stable output when reading from a pixel.
+They are therefore tuned for maximum current throughput as explained in Section~\ref{sec:leakagecurrent} and verified in Section~\ref{sec:Simulations}.
+
+\begin{table}[htbp]
+  \centering
+  \caption{Physical values of capacitors}
+  \begin{tabular}{c | c}
+    Component & C[F] \\
+    \midrule
+    CS & $2.5p$ \\
+    CC1 & $3.0p$ \\
+    CC2 & $3.0p$
+  \end{tabular} \label{tab:capcomponentvalues}
+\end{table}
+
+\subsection{Analog system overview}
 
 
 \begin{figure}[htbp]
