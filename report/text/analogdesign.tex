@@ -34,7 +34,7 @@ The choice of physical dimensions are showed in table \ref{tab:transcomponentval
 
 \subsection{Values for capacitors}
 
-The capacitors will be scaled to have maximum dynamic range. We know that the exposure time  will be between $2ms$ and $30ms$, and the capacitor should be fully charged at exactly 30ms. If the capacitance is too low, the capacitor will be fully charged before the full 30ms exposure time, which is not ideal. Tis needs to be correct when the light sensor is maxed out. The value for CS was empirically found with simulation, see Section~\ref{sec:Simulations}.
+The capacitors will be scaled to have maximum dynamic range. We know that the exposure time  will be between $2ms$ and $30ms$, and the capacitor should be fully charged at exactly 30ms. If the capacitance is too low, the capacitor will be fully charged before the full 30ms exposure time, which is not ideal. This needs to be correct when the light sensor is maxed out. The value for CS was empirically found with simulation, see Section~\ref{sec:Simulations}.
 
 The current source transistors MC1 and MC2 must be tuned for the quickest possible response of the current source, this is in order to get the fastest possible stable output when reading from a pixel.
 They are therefore tuned for maximum current throughput as explained in Section~\ref{sec:leakagecurrent} and verified in Section~\ref{sec:Simulations}.
@@ -56,8 +56,8 @@ They are therefore tuned for maximum current throughput as explained in Section~
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.85\textwidth]{figures/SchematicPixel}
-  \caption{Implementation of one pixel, figure allso exist in Appendix~\ref{ap:Schematics}}
+  \includegraphics[width=0.95\textwidth]{figures/SchematicPixel}
+  \caption{Implementation of one pixel, figure also exist in Appendix~\ref{ap:Schematics}}
   \label{fig:implpixel}
 \end{figure}
 \begin{figure}[htbp]
