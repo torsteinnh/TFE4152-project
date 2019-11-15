@@ -1,5 +1,9 @@
+The digital system as a whole consists of a few parts, mainly the control block, teh ADC's and the clock pulse generator.The clock pulse generator creates a clock signal at $1KHz$, which is being used as a synchronizer clock signal for the control block.
+
+The control block will activate each action on each clock rising edge. 
+
 The digital control system is designed as a finite state machine with the states illegal, idle, expose and readout as shown in figure~\ref{fig:fsmDiagram}.
-The logic connecded to each state is as shown below.
+The logic connected to each state is as shown below.
 
 \begin{outline}
   \1 Illegal
