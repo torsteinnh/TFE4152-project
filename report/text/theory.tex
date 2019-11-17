@@ -1,20 +1,20 @@
 % The underlying theory of the report
 
-\subsection{One digital pixel} \label{sec:oneDigitalPixel}
+\subsection{One digital pixel}\label{sec:oneDigitalPixel}
 
 
 Each pixel in the camera is constructed as shown in figure~\ref{fig:pixelschematic}.
 The photo diodes detecting the actual light does, in many ways, act as a current source dependent on the light on it, when a picture is taken this
-current is let through M1 and used to charge CS.
-Before each picture is taken, the transistor M2 is opened to reset the voltage stored over the capacitor CS.
+current is let through the transistor M1 and used to charge the capacitor CS.
+Before each picture is taken, the transistor M2 is opened to reset the voltage stored over CS.
 
-It is important that the transistors M1 and M2 are not let on simultaneously for extended periods of time as this results in a short circuit from VDD to VSS thorugh PD1.
+It is important that M1 and M2 are not let on simultaneously for extended periods of time as this results in a short circuit from VDD to VSS through the photo diode PD1.
 While the photo diode limits the current, this still might lead to excessive power usage and subsequent heating issues over time.
 
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.85\textwidth]{figures/pixel}
+  \includegraphics[width=0.80\textwidth]{figures/pixel}
   \caption{Schematic of one pixel with readout circuit, figure from~\cite{oppgave}}\label{fig:pixelschematic}
 \end{figure}
 
@@ -23,7 +23,7 @@ The transistor M3 is used to convert the voltage stored over CS into a variable 
 the transistor M4 functions as a simple switch to isolate the pixel from OUT to free the wire when other pixels in the camera are using it.
 
 
-\subsection{Leakage through transistors} \label{sec:leakagecurrent}
+\subsection{Leakage through transistors}\label{sec:leakagecurrent}
 
 We will in this project assume that all voltage transient are so slow that no leakage current is present between gate and the other ports of any of the transistors,
 in the same way we assume there are no leakage currents through any of the capacitors.
@@ -42,6 +42,6 @@ The requirements to be met by the controller are as follows:
 \begin{itemize}
 \item Pull the erase pin high except when exposing or reading the image
 \item Pull the expose pin high for an appropriate length of time as defined by the user
-\item Read out the values of all pixels in the correct order avoiding interference between different pixels on the same ADC.
+\item Read out the values of all pixels in the correct order avoiding interference between different pixels connected to the same ADC.
 \item Enable the user to reset the whole system. Though the image being taken might be lost the camera should function normally afterwards.
 \end{itemize}

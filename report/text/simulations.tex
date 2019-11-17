@@ -1,7 +1,7 @@
 \subsection{Analog simulations} \label{sec:analogSimulations}
 
 All simulations of the analog circuitry were done using the AimSpice SPICE backend~\cite{AIMSpice} along with the AIMPlot~\cite{aimplot} frontend.
-The resulting figures~\ref{fig:analog7500}~through~\ref{fig:analogLeakingM2} display the same voltage signals plotted as a function of time.
+The resulting figures~\ref{fig:analog7502}~through~\ref{fig:analogLeakingM2} display the same voltage signals plotted as a function of time.
 From top to bottom of the legend the signals are:
 \begin{itemize}
 \item The eraze control input
@@ -22,6 +22,9 @@ This shows that the camera can handle both maximum and minimum lighting conditio
 A more typical situation is shown in figure~\ref{fig:analog4003} with 400 pA diode current and 4 ms exposure.
 
 The camera is still possible to overexpose as shown in figure~\ref{fig:analog40010}, the user should therefore set the exposure to a sensible level.
+
+Both the need for the current amplifiers and the possibility of leakage through M1 or M2 were discussed in Section~\ref{sec:AnalogDesign}.
+In order to demonstrate these effects the camera was tested both without the current amplifiers and with a leaky transistor M2 as shown in figures~\ref{fig:analog4003nocurrent}~and~\ref{fig:analogLeakingM2}.
 
 \begin{figure}[H]
   \centering
@@ -52,8 +55,6 @@ The camera is still possible to overexpose as shown in figure~\ref{fig:analog400
 \end{figure}
 
 
-Both the need for the current amplifiers and the possibility of leakage through M1 or M2 were discussed in Section~\ref{sec:AnalogDesign}.
-In order to demonstrate these effects the camera was tested both without the current amplifiers and with a leaky transistor M2 as shown in figures~\ref{fig:analog4003nocurrent}~and~\ref{fig:analogLeakingM2}.
 
 \begin{figure}[H]
   \centering

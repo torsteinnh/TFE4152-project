@@ -25,16 +25,16 @@ module readout_seq(input logic clk,
 	step <= 0;
       
       case (step)
-	0: {nre1, nre2, adc} = 3'b000;
-	1: {nre1, nre2, adc} = 3'b100;
-	2: {nre1, nre2, adc} = 3'b101;
-	3: {nre1, nre2, adc} = 3'b100;
-	4: {nre1, nre2, adc} = 3'b000;
-	5: {nre1, nre2, adc} = 3'b010;
-	6: {nre1, nre2, adc} = 3'b011;
-	7: {nre1, nre2, adc} = 3'b010;
-	8: {nre1, nre2, adc} = 3'b000;
-	default: {nre1, nre2, adc} = 3'b000;
+	0: {nre1, nre2, adc} = 3'b110;
+	1: {nre1, nre2, adc} = 3'b010;
+	2: {nre1, nre2, adc} = 3'b011;
+	3: {nre1, nre2, adc} = 3'b010;
+	4: {nre1, nre2, adc} = 3'b110;
+	5: {nre1, nre2, adc} = 3'b100;
+	6: {nre1, nre2, adc} = 3'b101;
+	7: {nre1, nre2, adc} = 3'b100;
+	8: {nre1, nre2, adc} = 3'b110;
+	default: {nre1, nre2, adc} = 3'b110;
       endcase // case (step)
    end // always @ (*)
 
