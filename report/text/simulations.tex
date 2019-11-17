@@ -1,9 +1,22 @@
-\subsection{Analog simulations}
+\subsection{Analog simulations} \label{sec:analogSimulations}
 
 All simulations of the analog circuitry were done using the AimSpice SPICE backend~\cite{AIMSpice} along with the AIMPlot~\cite{aimplot} frontend.
+The resulting figures~\ref{fig:analog7500}~through~\ref{fig:analogLeakingM2} display the same voltage signals plotted as a function of time.
+From top to bottom of the legend the signals are:
+\begin{itemize}
+\item The eraze control input
+\item The expose control input
+\item The voltage stored over the capacitor CS in pixel 11
+\item The readout enable control input for row 1
+\item The readout enable control input for row 2
+\item The output of column 1
+\item The output of column 2
+\end{itemize}
+
+Aditional simulations can be done by the reader utilizing the SPICE code in Appendix~\ref{ap:SpiceCode}.
 
 The camera was simulated as a whole with the spice code described in Appendix~\ref{ap:SpiceCode} listing~\ref{lst:cameratoplevel}.
-In order to show that the camera is working as intended it was simulated with 750 pA current from the diodes and 2 ms exposure time as well as 50 pA diode current and 30 ms as shown in figure~\ref{fig:analog7502}~and~\ref{fig:analog5030}.
+In order to show that the camera is working as intended simulations were performed with 750 pA current from the diodes and 2 ms exposure time as well as 50 pA diode current and 30 ms as shown in figure~\ref{fig:analog7502}~and~\ref{fig:analog5030}.
 This shows that the camera can handle both maximum and minimum lighting conditions without over or under exposure.
 
 A more typical situation is shown in figure~\ref{fig:analog4003} with 400 pA diode current and 4 ms exposure.
@@ -39,8 +52,8 @@ The camera is still possible to overexpose as shown in figure~\ref{fig:analog400
 \end{figure}
 
 
-Both the need for the current amplifiers and the possibility of leakage through M1 or M2 was discussed in Section~\ref{sec:AnalogDesign}.
-In order to illustrate test these claims the camera was tested without the current amplifiers and with a leaky transistor M2 as shown in figures~\ref{fig:analog4003nocurrent}~and~\ref{fig:analogLeakingM2}.
+Both the need for the current amplifiers and the possibility of leakage through M1 or M2 were discussed in Section~\ref{sec:AnalogDesign}.
+In order to demonstrate these effects the camera was tested both without the current amplifiers and with a leaky transistor M2 as shown in figures~\ref{fig:analog4003nocurrent}~and~\ref{fig:analogLeakingM2}.
 
 \begin{figure}[H]
   \centering
@@ -63,6 +76,11 @@ In order to illustrate test these claims the camera was tested without the curre
 
 Each individual module of the digital design was tested with test benches written in SystemVerilog as shown in Appendix~\ref{ap:VerilogCode}.
 They were run using icarus-verilog~\cite{icarusVL} and the result visualized using GTKWave~\cite{gtkwave}.
+All waveform files are available from~\cite{githubProject}.
+
+In figures~\ref{fig:digexptest}~through~\ref{fig:digreadouttest} the color green was used for input, orange for internal state and red for output.
+Note that the clock signal is red for better contrast.
+In figures~\ref{fig:digcamtest1}~and~\ref{fig:digcamtest2} the color blue is also introduced for internal signals of submodules.
 
 Figure~\ref{fig:digexptest} shows the exposure counter, it demonstrates its minimum and maximum values of 2 and 30 being reached without bugs.
 

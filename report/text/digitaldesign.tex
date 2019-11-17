@@ -1,9 +1,9 @@
-The digital system as a whole consists of a few parts, mainly the control block, teh ADC's and the clock pulse generator.The clock pulse generator creates a clock signal at $1KHz$, which is being used as a synchronizer clock signal for the control block.
+The digital system as a whole consists of a few parts, mainly the control block, the ADC's and the clock pulse generator.The clock pulse generator creates a clock signal at $1 \mskip3mu KHz$, which is being used as a synchronizer clock signal for the control block.
 
-The control block will activate each action on each clock rising edge. 
+The control block will activate each action on each rising clock edge. 
 
 The digital control system is designed as a finite state machine with the states illegal, idle, expose and readout as shown in figure~\ref{fig:fsmDiagram}.
-The logic connected to each state is as shown below.
+The logic connected to each state is as below.
 
 \begin{outline}
   \1 Illegal
@@ -13,10 +13,10 @@ The logic connected to each state is as shown below.
   \2 In this state exposure increase and exposure decrease are enabled, increase takes presidence over decrease.
   \1 Expose
   \2 The machine normally stays in this state until the exposure time has passed.
-  \2 Reset is the only functional input.
+  \2 Reset is the only functioning input.
   \1 Readout
   \2 The readout sequencer is started, the next state is set to idle afterwards.
-  \2 Reset is the only functional input.
+  \2 Reset is the only functioning input.
 \end{outline}
 
 \begin{figure}[htbp]
@@ -26,6 +26,7 @@ The logic connected to each state is as shown below.
   \label{fig:fsmDiagram}
 \end{figure}
 
+The main concern in the implementation of the hardware was maintainability since the project is meant as a proof of concept and not a production ready design.
 The hardware was implemented as shown in more detail in figure~\ref{fig:digschematic}.
 The countown logic for the exposure was divided into two parts, one 5bit register to store a value between 2 and 30 as well as a countdown register
 to signal the end of the exposure period.

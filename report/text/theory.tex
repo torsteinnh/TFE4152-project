@@ -1,14 +1,14 @@
 % The underlying theory of the report
 
-\subsection{One digital pixel}
+\subsection{One digital pixel} \label{sec:oneDigitalPixel}
 
 
 Each pixel in the camera is constructed as shown in figure~\ref{fig:pixelschematic}.
 The photo diodes detecting the actual light does, in many ways, act as a current source dependent on the light on it, when a picture is taken this
 current is let through M1 and used to charge CS.
-Before each picture is taken, M2 is opened to reset the voltage stored over CS.
+Before each picture is taken, the transistor M2 is opened to reset the voltage stored over the capacitor CS.
 
-It is important that M1 and M2 are not let on simultaneously for extended periods of time as this results in a short circuit from VDD to VSS thorugh PD1.
+It is important that the transistors M1 and M2 are not let on simultaneously for extended periods of time as this results in a short circuit from VDD to VSS thorugh PD1.
 While the photo diode limits the current, this still might lead to excessive power usage and subsequent heating issues over time.
 
 
@@ -19,8 +19,8 @@ While the photo diode limits the current, this still might lead to excessive pow
 \end{figure}
 
 
-M3 is used to convert the voltage stored over CS into a variable resistance between N3 and VSS for a nondestructive readout of the pixel,
-M4 functions as a simple switch to isolate the pixel from OUT to free the wire when other pixels in the camera are using it.
+The transistor M3 is used to convert the voltage stored over CS into a variable resistance between the nodes N3 and VSS for a nondestructive readout of the pixel,
+the transistor M4 functions as a simple switch to isolate the pixel from OUT to free the wire when other pixels in the camera are using it.
 
 
 \subsection{Leakage through transistors} \label{sec:leakagecurrent}
@@ -35,7 +35,7 @@ In order to minimize the leakage current through a transistor that is shut off $
 
 \subsection{Conceptual workings of a camera controller}
 
-As shown in Appendix~\ref{ap:Schematics}~figure~\ref{fig:analogCamera} the pixels depend on several digital input signals,
+As shown in figure~\ref{fig:analogCamera} found in Appendix~\ref{ap:Schematics} the behavior of the pixels depend on several digital input signals,
 the job of the camera controller is therefore to trigger these in the desired order.
 The requirements to be met by the controller are as follows:
 

@@ -1,12 +1,13 @@
 % This file contains the introduction of the report.
 
 There are several components that go into the process of creating a digital camera,
-among them are the exposure circuits for each circuit, a system to read out the values in turn
-and a control system for the whole process.
+among them are the exposure circuits for each pixel, a system to read out the values in turn
+and a control system for the whole camera.
 
 This project aims to give an extensive design example of these systems applied to a $2 \cdot 2$ pixel camera.
 It does not include any details on the manufacturing process, the analog to digital converters or the long term storage of the images, but focuses instead
 on the taking on the picture from user input to serialized voltage levels on an analog 2 bit buss.
 
+The design was tested with AIM-Spice~\cite{AIMSpice} and Icarus~verilog~\cite{icarusVL} as described in Section~\ref{sec:Simulations}
 For reference the analog design is shown as classic schematics in Appendix~\ref{ap:Schematics} and as SPICE net lists in Appendix~\ref{ap:SpiceCode}, the digital design is defined in SystemVerilog 2012 in Appendix~\ref{ap:VerilogCode}.
 In addition, all files related to the project are available on GitHub~\cite{githubProject}.
