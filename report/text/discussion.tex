@@ -3,8 +3,12 @@ operates according to the desired behaviour described in Section~\ref{sec:Analog
 
 It does however demonstrates a big weakness in that the amount of ADCs required scales with
 the square root of the number of pixels, a different design could easily yield either
-lower productioncost or shorter time between pictures.
+lower production cost or shorter time between pictures.
 Other than that future improvements to this particular project would probably focus on fine tuning and scaling.
 
 Since the analog design in Appendix~\ref{ap:SpiceCode} is written modularly, a natural continuation of the project would be to enable color as well as increase the resolution.
-The project would allso benefit from a more scalable and maintanable rewrite of the digital design in Appendix~\ref{ap:VerilogCode}.
+The project would also benefit from a more scalable and maintainable rewrite of the digital design in Appendix~\ref{ap:VerilogCode}.
+
+The control block is also made in such a way that it could easily handle more pixels, as these could simply be put in parallel for more pixels to be added. By using the 2-bit register for state machine, we could also assign some action for the illegal state if need be. 
+
+Because the countdown register does not utilize its full range, it is also possible to increase the possible exposure times the user could access.

@@ -4,7 +4,7 @@ All simulations of the analog circuitry were done using the AimSpice SPICE backe
 The resulting figures~\ref{fig:analog7502}~through~\ref{fig:analogLeakingM2} display the same voltage signals plotted as a function of time.
 From top to bottom of the legend the signals are:
 \begin{itemize}
-\item The eraze control input
+\item The erase control input
 \item The expose control input
 \item The voltage stored over the capacitor CS in pixel 11
 \item The readout enable control input for row 1
@@ -15,13 +15,13 @@ From top to bottom of the legend the signals are:
 
 Aditional simulations can be done by the reader utilizing the SPICE code in Appendix~\ref{ap:SpiceCode}.
 
-The camera was simulated as a whole with the spice code described in Appendix~\ref{ap:SpiceCode} listing~\ref{lst:cameratoplevel}.
+The camera was simulated as a whole with the spice code described in Appendix~\ref{ap:SpiceCode}, listing~\ref{lst:cameratoplevel}.
 In order to show that the camera is working as intended simulations were performed with 750 pA current from the diodes and 2 ms exposure time as well as 50 pA diode current and 30 ms as shown in figure~\ref{fig:analog7502}~and~\ref{fig:analog5030}.
 This shows that the camera can handle both maximum and minimum lighting conditions without over or under exposure.
 
 A more typical situation is shown in figure~\ref{fig:analog4003} with 400 pA diode current and 4 ms exposure.
 
-The camera is still possible to overexpose as shown in figure~\ref{fig:analog40010}, the user should therefore set the exposure to a sensible level.
+The camera is still able to produce an overexposed image, as shown in figure~\ref{fig:analog40010}. The user should therefore set the exposure to a sensible level and according to circumstances.
 
 Both the need for the current amplifiers and the possibility of leakage through M1 or M2 were discussed in Section~\ref{sec:AnalogDesign}.
 In order to demonstrate these effects the camera was tested both without the current amplifiers and with a leaky transistor M2 as shown in figures~\ref{fig:analog4003nocurrent}~and~\ref{fig:analogLeakingM2}.
@@ -83,7 +83,7 @@ In figures~\ref{fig:digexptest}~through~\ref{fig:digreadouttest} the color green
 Note that the clock signal is red for better contrast.
 In figures~\ref{fig:digcamtest1}~and~\ref{fig:digcamtest2} the color blue is also introduced for internal signals of submodules.
 
-Figure~\ref{fig:digexptest} shows the exposure counter, it demonstrates its minimum and maximum values of 2 and 30 being reached without bugs.
+Figure~\ref{fig:digexptest} shows the exposure counter, it demonstrates its minimum and maximum values of 2 and 30 being reached without errors.
 
 \begin{figure}[H]
   \centering

@@ -8,7 +8,7 @@ The logic connected to each state is as below.
   \1 Illegal
   \2 This state is mainly used for resets, it resets all peripherals and set the next state to idle.
   \1 Idle
-  \2 This is the normal operating state, the machine allways return to this state eventually.
+  \2 This is the normal operating state, the machine always return to this state eventually.
   \2 In this state exposure increase and exposure decrease are enabled, increase takes presidence over decrease.
   \1 Expose
   \2 The machine normally stays in this state until the exposure time has passed.
@@ -27,7 +27,7 @@ The logic connected to each state is as below.
 
 The main concern in the implementation of the hardware was maintainability since the project is meant as a proof of concept and not a production ready design.
 The hardware was implemented as shown in more detail in figure~\ref{fig:digschematic}.
-The countown logic for the exposure was divided into two parts, one 5bit register to store a value between 2 and 30 as well as a countdown register
+The countdown logic for the exposure was divided into two parts, one 5-bit register to store a value between 2 and 30 as well as a countdown register
 to signal the end of the exposure period.
 
 The readout cycle was also split out into its own sequencer independent of the rest of the machine.
@@ -35,7 +35,7 @@ The readout cycle was also split out into its own sequencer independent of the r
 \begin{figure}[p]
   \centering
   \includegraphics[width=0.85\textwidth]{figures/SchematicDigital}
-  \caption{Schematic of the digital design, figure allso found in Appendix~\ref{ap:Schematics}}
+  \caption{Schematic of the digital design, figure also found in Appendix~\ref{ap:Schematics}}
   \label{fig:digschematic}
 \end{figure}
 
