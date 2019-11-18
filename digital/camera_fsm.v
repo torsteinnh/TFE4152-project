@@ -3,7 +3,7 @@
  It depends on the fcd_reg, exp_reg and read_sequencer to function.
  */
 
-// `define _no_testbench_
+`define _no_testbench_
 
 `ifndef _fsm_logic_v_31_
  `define _fsm_logic_v_31_
